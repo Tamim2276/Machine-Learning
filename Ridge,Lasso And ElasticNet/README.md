@@ -24,7 +24,9 @@ The Jupyter notebook `RidgeLassoAndElasticNet.ipynb` contains the complete analy
     - **Box Plot Analysis:** Visualizing FWI distribution and identifying outliers
     - **Temporal Analysis:** Monthly fire occurrence patterns by region, showing August and September as peak fire months
 5.  **Feature Engineering and Model Preparation:** Creating new features and preparing the data for modeling.
-6.  **Model Training:** (This part is not yet implemented in the notebook but is the intended next step) Training Ridge, Lasso, and ElasticNet regression models to predict FWI.
+6.  **Feature Selection:** 
+    - Identifying and removing highly correlated features to prevent multicollinearity.
+    - Dropping features with an absolute correlation coefficient greater than 0.85.
 
 ## Key Findings
 

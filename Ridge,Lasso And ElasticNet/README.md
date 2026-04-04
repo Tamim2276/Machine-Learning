@@ -23,10 +23,19 @@ The Jupyter notebook `RidgeLassoAndElasticNet.ipynb` contains the complete analy
     - **Correlation Analysis:** Heatmap revealing relationships between features, with FWI showing high correlation (0.77) with FFMC
     - **Box Plot Analysis:** Visualizing FWI distribution and identifying outliers
     - **Temporal Analysis:** Monthly fire occurrence patterns by region, showing August and September as peak fire months
-5.  **Feature Engineering and Model Preparation:** Creating new features and preparing the data for modeling.
-6.  **Feature Selection:** 
-    - Identifying and removing highly correlated features to prevent multicollinearity.
-    - Dropping features with an absolute correlation coefficient greater than 0.85.
+5.  **Observations from EDA:** Key takeaways regarding fire seasonality and regional observations.
+6.  **Model Preparation:**
+    - Dropping temporal columns (day, month, year)
+    - Encoding target features into binary numeric classes
+    - Performing Train/Test splits (75%-25%)
+    - **Feature Selection:** Identifying and removing highly correlated features to prevent multicollinearity (dropping features with an absolute correlation > 0.85).
+    - **Feature Scaling:** Applying `StandardScaler` to normalize the data.
+7.  **Model Training and Evaluation:**
+    - **Linear Regression:** Standard regression fitting.
+    - **Lasso Regression & LassoCV:** L1 Regularization with and without cross-validation tuning.
+    - **Ridge Regression & RidgeCV:** L2 Regularization with and without cross-validation tuning.
+    - **ElasticNet & ElasticNetCV:** Combination of L1 and L2 Regularization tuned via cross-validation.
+    - **Evaluation Metrics:** Evaluated using Mean Absolute Error (MAE) and R-squared ($R^2$) Score.
 
 ## Key Findings
 
@@ -44,6 +53,7 @@ The notebook includes several informative visualizations:
 - **Correlation Heatmap:** Complete correlation matrix with annotations showing feature relationships
 - **Box Plot:** FWI distribution with optimized tick spacing to prevent label overlap
 - **Bar Charts:** Monthly fire analysis for both Bejaia and Sidi-Bel Abbes regions
+- **Regression Scatter Plots:** Visualizing Actual vs Predicted FWI alongside the best fit regression line (`sns.regplot`) for every trained model to evaluate fit visually.
 
 ## How to Run
 

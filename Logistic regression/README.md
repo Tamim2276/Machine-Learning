@@ -11,7 +11,7 @@ This project is a detailed walk-through demonstrating Logistic Regression using 
 - **Data Generation:** Using `make_classification` to build a simple synthetic dataset.
 - **Baseline Modeling:** Training a default `LogisticRegression` to establish baseline metrics.
 - **Evaluation:** Using accuracy score, confusion matrix, and a classification report to check the general performance of our model against test data.
-- **Hyperparameter Tuning:** Searching for optimal combinations of `solver`, `penalty`, and `C` algorithms utilizing a grid mapped to dictionaries (to avoid incompatible parameter pairings). We apply `StratifiedKFold` for solid cross-validation splits.
+- **Hyperparameter Tuning:** Searching for optimal combinations of `solver`, `penalty`, and `C` algorithms utilizing both `GridSearchCV` (exhaustive search) and `RandomizedSearchCV` (randomized subset search) with a grid mapped to dictionaries (to avoid incompatible parameter pairings). We apply `StratifiedKFold` for solid cross-validation splits.
 - **Training Validation vs. Test Score:** Noticing the slight variations between internally-validated training accuracy (`grid.best_score_`) vs the unseen hold-out accuracy.
 
 ## Instructions

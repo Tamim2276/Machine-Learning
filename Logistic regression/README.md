@@ -4,7 +4,8 @@ This project is a detailed walk-through demonstrating Logistic Regression using 
 
 ## Project Structure
 
-- `logisticRegression.ipynb` : The main notebook containing the data generation, training, hyperparameter search, and evaluation logic.
+- `logisticRegression.ipynb` : The main notebook containing binary classification data generation, training, hyperparameter search, and evaluation logic.
+- `MulticlassClassification.ipynb` : A subsidiary notebook demonstrating how to handle scenarios where targets fall into more than two classes (e.g., $4$ discrete choices), adapting the solver behavior and resulting in multidimensional confusion matrices.
 
 ## Key Concepts Covered
 
